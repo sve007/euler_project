@@ -15,7 +15,7 @@ def is_prime(n: int) -> bool:
     return prime_bool
 
 
-def generate_primes(n: int) -> list:
+def find_primes_below(n: int) -> list:
     """Find all primes less than or equal to a number n and return as a list."""
     # Sieve of Eratosthenes
     primes = [True]*n
@@ -43,3 +43,7 @@ def find_prime_factors(n: int) -> list:
                 factors.append(i)
                 n = n / i
     return factors
+
+def generate_primes(n):
+    """Generate and return list of n consecutive primes."""
+    return primes

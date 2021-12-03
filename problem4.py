@@ -4,8 +4,9 @@
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
 numbers = []
-for p in range(100, 1000):
-    for q in range(100, 1000):
+max_val = 10000
+for p in range(100, max_val):
+    for q in range(p, max_val):
         numbers.append(p*q)
 
 numbers.sort(reverse=True)
@@ -15,4 +16,3 @@ for n in numbers:
         break
 
 print(largest_palindrome)
-
