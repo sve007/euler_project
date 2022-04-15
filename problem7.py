@@ -4,3 +4,7 @@
 
 import prime_functions as pf
 
+generator = pf.generate_primes(1, 10002, indexlim=True)
+primes = list(generator)
+
+print(primes[-1])

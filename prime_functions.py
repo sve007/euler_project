@@ -44,6 +44,35 @@ def find_prime_factors(n: int) -> list:
                 n = n / i
     return factors
 
-def generate_primes(n):
-    """Generate and return list of n consecutive primes."""
-    return primes
+
+def generate_primes(lowerlim=None, upperlim=None, indexlim=False):
+    """Generator of n consecutive primes. lowerlim and upperlim optional for slices of the primes."""
+    n = lowerlim if lowerlim else 1
+
+    if indexlim:
+        i = 0
+        if upperlim:
+            while n < upperlim:
+                i += 1
+                if is_prime(i):
+                    n += 1
+                    yield i
+        else:
+            while True:
+                i += 1
+                if is_prime(i):
+                    n += 1
+                    yield i
+
+    else:
+        if upperlim:
+            while n < upperlim:
+                n += 1
+                if is_prime(n):
+                    yield n
+        else:
+            while True:
+                n += 1
+                if is_prime(n):
+                    yield n
+
