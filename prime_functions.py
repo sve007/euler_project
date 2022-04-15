@@ -37,12 +37,26 @@ def find_prime_factors(n: int) -> list:
             if 2 not in factors:
                 factors.append(2)
             n = int(n/2)
-        for i in range(3, math.ceil(math.sqrt(n))+1, 2):
-            # print(n,i)
-            if n % i == 0:
-                factors.append(i)
+        for i in range(3, math.floor(math.sqrt(n))+1, 2):
+            while n % i == 0:
+                if i not in factors:
+                    factors.append(i)
                 n = n / i
     return factors
+
+def find_factors(n: int) -> list:
+    """Find all prime factors of an integer n and return as a list."""
+    factors = [1]
+    if n == 1:
+        return(factors)
+    if not n <= 1:
+        for i in range(2, math.floor(math.sqrt(n))+1):
+            if n%i == 0:
+                factors.append(i)
+                factors.append(int(n/i))
+    factors.append(n)
+    factors.sort()
+    return set(factors)
 
 
 def generate_primes(lowerlim=None, upperlim=None, indexlim=False):
@@ -75,4 +89,3 @@ def generate_primes(lowerlim=None, upperlim=None, indexlim=False):
                 n += 1
                 if is_prime(n):
                     yield n
-
