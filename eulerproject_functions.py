@@ -89,3 +89,10 @@ def generate_primes(lowerlim=None, upperlim=None, indexlim=False):
                 n += 1
                 if is_prime(n):
                     yield n
+
+
+def generate_fibonacci(n=0, m=1):
+    while True:
+        yield m
+        n, m = m, m + n
+

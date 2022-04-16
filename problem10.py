@@ -2,7 +2,7 @@
 #
 # Find the sum of all the primes below two million.
 
-import prime_functions as pf
+import eulerproject_functions as ef
 
-primes = pf.find_primes_below(2_000_000)
+primes = ef.find_primes_below(2_000_000)
 print(sum(primes))

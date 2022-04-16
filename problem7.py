@@ -2,9 +2,9 @@
 #
 # What is the 10 001st prime number?
 
-import prime_functions as pf
+import eulerproject_functions as ef
 
-generator = pf.generate_primes(1, 10002, indexlim=True)
+generator = ef.generate_primes(1, 10002, indexlim=True)
 primes = list(generator)
 
 print(primes[-1])

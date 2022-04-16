@@ -16,7 +16,7 @@
 #
 # What is the value of the first triangle number to have over five hundred divisors?
 
-import prime_functions as pf
+import eulerproject_functions as ef
 
 
 def generate_triangle_number():
@@ -32,7 +32,7 @@ n = 1
 triangle_generator = generate_triangle_number()
 while len(factors) <= 500:
     tn = sum(range(1, n+1))
-    factors = pf.find_factors(n=tn)
+    factors = ef.find_factors(n=tn)
     n += 1
 
 print(tn, factors)

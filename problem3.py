@@ -2,6 +2,6 @@
 #
 # What is the largest prime factor of the number 600851475143 ?
 
-import prime_functions as pf
+import eulerproject_functions as ef
 
-print(max(pf.find_prime_factors(600851475143)))
+print(max(ef.find_prime_factors(600851475143)))
