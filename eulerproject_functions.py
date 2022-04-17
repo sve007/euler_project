@@ -44,18 +44,21 @@ def find_prime_factors(n: int) -> list:
                 n = n / i
     return factors
 
-def find_factors(n: int) -> list:
-    """Find all prime factors of an integer n and return as a list."""
-    factors = [1]
-    if n == 1:
-        return(factors)
-    if not n <= 1:
-        for i in range(2, math.floor(math.sqrt(n))+1):
-            if n%i == 0:
-                factors.append(i)
-                factors.append(int(n/i))
-    factors.append(n)
-    factors.sort()
+
+def find_factors(n: int) -> set:
+    """Find all prime factors of a positive integer n and return as a list."""
+    factors = []
+    if n > 0:
+        factors = [1]
+        if n == 1:
+            return set(factors)
+        if not n <= 1:
+            for i in range(2, math.floor(math.sqrt(n))+1):
+                if n % i == 0:
+                    factors.append(i)
+                    factors.append(int(n/i))
+        factors.append(n)
+        factors.sort()
     return set(factors)
 
 
@@ -95,4 +98,3 @@ def generate_fibonacci(n=0, m=1):
     while True:
         yield m
         n, m = m, m + n
-
