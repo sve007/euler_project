@@ -5,7 +5,7 @@
 # What is the greatest product of four adjacent numbers in the same direction
 # (up, down, left, right, or diagonally) in the 20×20 grid?
 
-with open("input_data/problem11_input.txt") as f:
+with open("input_data/problem011_input.txt") as f:
     grid = [row.split(" ") for row in f.read().split("\n")]
 
 for i, row in enumerate(grid):

@@ -30,7 +30,7 @@
 # However, Problem 67, is the same challenge with a triangle containing one-hundred rows;
 # it cannot be solved by brute force, and requires a clever method! ;o)
 
-with open("input_data/problem18_input.txt") as f:
+with open("input_data/problem018_input.txt") as f:
     pyr = f.read().split("\n")
     for i, row in enumerate(pyr):
         pyr[i] = [int(j) for j in row.split(" ")]

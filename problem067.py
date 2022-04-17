@@ -16,7 +16,7 @@
 # as there are 299 altogether! If you could check one trillion (1012) routes every second
 # it would take over twenty billion years to check them all. There is an efficient algorithm to solve it. ;o)
 
-with open("input_data/problem67_input.txt") as f:
+with open("input_data/problem067_input.txt") as f:
     pyr = f.read().split("\n")
     for i, row in enumerate(pyr):
         pyr[i] = [int(j) for j in row.split(" ")]
