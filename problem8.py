@@ -1,6 +1,6 @@
 # The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
 
-with open("problem8_input.txt") as f:
+with open("input_data/problem08_input.txt") as f:
     input_data = [i for i in f.read().split("\n")]
 
 # Find the thirteen adjacent digits in the 1000-digit number that have the greatest product.

@@ -8,7 +8,7 @@
 #
 # What is the total of all the name scores in the file?
 
-with open("problem22_input.txt") as f:
+with open("input_data/problem22_input.txt") as f:
     input_data = f.read().split('","')
     input_data[0] = input_data[0][1:]
     input_data[-1] = input_data[-1][:-1]
