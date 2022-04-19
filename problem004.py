@@ -10,6 +10,7 @@ for p in range(100, max_val):
         numbers.append(p*q)
 
 numbers.sort(reverse=True)
+largest_palindrome = None
 for n in numbers:
     if str(n) == str(n)[::-1]:
         largest_palindrome = n

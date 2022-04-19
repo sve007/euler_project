@@ -3,6 +3,7 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 import time
 
+
 def check(n, max_divisor):
     valid = True
     for i in range(2, max_divisor+1):
