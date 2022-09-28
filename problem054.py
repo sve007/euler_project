@@ -1,16 +1,6 @@
-
 # Long problem so for reference: https://projecteuler.net/problem=54
 # Manipulated input file by adding a newline to the end of the file.
 from collections import Counter
-
-
-hands1 = []
-hands2 = []
-
-with open("input_data/problem054_input.txt", "r") as f:
-    for line in f:
-        hands1.append(line[0:14].split(' '))
-        hands2.append(line[15:-1].split(' '))
 
 
 class Card:
@@ -91,6 +81,14 @@ class Hand:
         numbers_ = sorted(self.numbers, reverse=True)
         self.hc = max(numbers_[nignore:])
 
+
+hands1 = []
+hands2 = []
+
+with open("input_data/problem054_input.txt", "r") as f:
+    for line in f:
+        hands1.append(line[0:14].split(' '))
+        hands2.append(line[15:-1].split(' '))
 
 nwins = 0
 j = 1
