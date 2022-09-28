@@ -11,8 +11,15 @@
 # Find the sum of all the numbers that can be written
 # as the sum of fifth powers of their digits.
 
+# The maximum sum for a number is the amount of digits multiplied by 9**5.
+# This means that for 7 digit numbers the maximum value is 7*9**5 = 413343,
+# which is smaller than the smallest 7 digit number; 1000000. Even better,
+# we know that our upper limit is 413343 since the sum has to be equal to
+# the original number.
+
 totsum = 0
-for n in range(2, 10000000):
+
+for n in range(2, 413343):
     sum = 0
     sum_ = [int(letter) for letter in str(n)]
     for i in sum_:
